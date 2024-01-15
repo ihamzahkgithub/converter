@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late Future<RatesModel> result;
   late Future<Map> allcurrencies;
   final formkey = GlobalKey<FormState>();
-  String convertedCurrency = 'Converted Currency will be shown here :)';
+  String convertedCurrency = 'Converted Currency :';
 
   @override
   void initState() {

@@ -21,7 +21,7 @@ class _AnyToAnyState extends State<AnyToAny> {
   TextEditingController amountController = TextEditingController();
   String dropdownValue1 = 'USD';
   String dropdownValue2 = 'PKR';
-  String answer = 'Converted Currency will be shown here :)';
+  String answer = 'Converted Currency :';
 
   @override
   Widget build(BuildContext context) {
@@ -190,21 +190,23 @@ class _AnyToAnyState extends State<AnyToAny> {
                           ),
                         ],
                       ),
-                      child: Card(
-                        color: Colors.black,
-                        elevation:
-                            5, // Set the elevation to 0 to use the container's shadow
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Text(
-                            answer,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                              color: Colors.white,
+                      child: SingleChildScrollView(
+                        child: Card(
+                          color: Colors.black,
+                          elevation:
+                              5, // Set the elevation to 0 to use the container's shadow
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Text(
+                              answer,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 11,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),

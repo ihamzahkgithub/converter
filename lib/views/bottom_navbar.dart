@@ -35,7 +35,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white, // Set text color
-                  fontSize: 14, // Adjust font size
+                  fontSize: 11, // Adjust font size
                 ),
               ),
             ),
