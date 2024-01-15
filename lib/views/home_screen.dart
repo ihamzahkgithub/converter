@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import '../Components/any_to_any.dart';
 import '../Models/fetch_rates.dart';
 import '../Models/rates_model.dart';
+import 'bottom_navbar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.teal,
         title: const Text(
           'Currency Converter',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
@@ -86,36 +86,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
         convertedCurrency: convertedCurrency,
-      ),
-    );
-  }
-}
-
-class CustomBottomNavigationBar extends StatelessWidget {
-  final String convertedCurrency;
-
-  CustomBottomNavigationBar({required this.convertedCurrency});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      color: Colors.grey,
-      padding: const EdgeInsets.all(10),
-      child: Column(
-        children: [
-          Text(
-            '${DateFormat('dd/MM/yyyy hh:mm').format(DateTime.now())}',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white),
-          ),
-          const SizedBox(),
-          Text(
-            '  $convertedCurrency',
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ],
       ),
     );
   }
