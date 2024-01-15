@@ -28,7 +28,7 @@ class _AnyToAnyState extends State<AnyToAny> {
     var w = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.only(top: 50),
+        padding: const EdgeInsets.only(top: 65),
         child: Card(
           elevation: 8,
           margin: const EdgeInsets.all(16),
@@ -36,7 +36,7 @@ class _AnyToAnyState extends State<AnyToAny> {
             child: Container(
               padding: const EdgeInsets.all(20),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
